@@ -12,21 +12,20 @@ if(loading){
             {
                 countries.map((country, i) => (
                    
-                    <li className='list-group-item'>
-                   {country.id} - {country.name} -
+                    <li key={country.id} className='list-group-item'>
+                   {country.id} - {country.name} 
                   
                    <li className='list-group-item'>
-                    Abbreviation - {country.abbreviation}
-                    { console.log(country.media)}
+                   Phone : {country.phone}   Abbreviation : {country.abbreviation}  Capital : {country.capital}  Population : {country.population}
                    </li> 
-                   <li className='list-group-item'>Capital - {country.capital} </li>
-                   <li className='list-group-item'>  </li>
-                    <img src={country.media} alt='' className='ml-2'/>
+                  
+                  <img src={country.flag} alt='' className='ml-2' style={{width:25}}/>
                     </li>
                 ))
            
             }
         </ul>
+        
     )
 }
 
